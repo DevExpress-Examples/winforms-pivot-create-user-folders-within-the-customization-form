@@ -25,6 +25,8 @@
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
             this.pivotGridControl1 = new DevExpress.XtraPivotGrid.PivotGridControl();
+            this.salesPersonBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nwindDataSet = new XtraPivotGrid_UserFolders.nwindDataSet();
             this.fieldCountry = new DevExpress.XtraPivotGrid.PivotGridField();
             this.fieldProductName = new DevExpress.XtraPivotGrid.PivotGridField();
             this.fieldCategoryName = new DevExpress.XtraPivotGrid.PivotGridField();
@@ -32,8 +34,6 @@
             this.fieldQuantity = new DevExpress.XtraPivotGrid.PivotGridField();
             this.fieldExtendedPrice = new DevExpress.XtraPivotGrid.PivotGridField();
             this.fieldSalesPerson = new DevExpress.XtraPivotGrid.PivotGridField();
-            this.salesPersonBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.nwindDataSet = new XtraPivotGrid_UserFolders.nwindDataSet();
             this.salesPersonTableAdapter = new XtraPivotGrid_UserFolders.nwindDataSetTableAdapters.SalesPersonTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pivotGridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesPersonBindingSource)).BeginInit();
@@ -54,8 +54,18 @@
             this.fieldSalesPerson});
             this.pivotGridControl1.Location = new System.Drawing.Point(0, 0);
             this.pivotGridControl1.Name = "pivotGridControl1";
-            this.pivotGridControl1.Size = new System.Drawing.Size(845, 469);
+            this.pivotGridControl1.Size = new System.Drawing.Size(694, 373);
             this.pivotGridControl1.TabIndex = 0;
+            // 
+            // salesPersonBindingSource
+            // 
+            this.salesPersonBindingSource.DataMember = "SalesPerson";
+            this.salesPersonBindingSource.DataSource = this.nwindDataSet;
+            // 
+            // nwindDataSet
+            // 
+            this.nwindDataSet.DataSetName = "nwindDataSet";
+            this.nwindDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // fieldCountry
             // 
@@ -101,7 +111,9 @@
             this.fieldExtendedPrice.AreaIndex = 0;
             this.fieldExtendedPrice.Caption = "Extended Price";
             this.fieldExtendedPrice.FieldName = "Extended Price";
+            this.fieldExtendedPrice.MinWidth = 100;
             this.fieldExtendedPrice.Name = "fieldExtendedPrice";
+            this.fieldExtendedPrice.Width = 200;
             // 
             // fieldSalesPerson
             // 
@@ -111,16 +123,6 @@
             this.fieldSalesPerson.FieldName = "Sales Person";
             this.fieldSalesPerson.Name = "fieldSalesPerson";
             // 
-            // salesPersonBindingSource
-            // 
-            this.salesPersonBindingSource.DataMember = "SalesPerson";
-            this.salesPersonBindingSource.DataSource = this.nwindDataSet;
-            // 
-            // nwindDataSet
-            // 
-            this.nwindDataSet.DataSetName = "nwindDataSet";
-            this.nwindDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // salesPersonTableAdapter
             // 
             this.salesPersonTableAdapter.ClearBeforeFill = true;
@@ -129,10 +131,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(845, 469);
+            this.ClientSize = new System.Drawing.Size(694, 373);
             this.Controls.Add(this.pivotGridControl1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Customization Window Folders Example";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pivotGridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesPersonBindingSource)).EndInit();

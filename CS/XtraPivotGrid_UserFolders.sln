@@ -1,5 +1,7 @@
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XtraPivotGrid_UserFolders", "XtraPivotGrid_UserFolders\XtraPivotGrid_UserFolders.csproj", "{C7DF71A1-D040-4B8E-9E28-593C85CF71D9}"
 EndProject
 Global
@@ -21,5 +23,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7EA5422C-43B6-43F1-B493-7A53E4A67038}
 	EndGlobalSection
 EndGlobal

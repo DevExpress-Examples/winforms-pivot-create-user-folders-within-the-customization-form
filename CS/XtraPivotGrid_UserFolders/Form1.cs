@@ -1,32 +1,33 @@
-﻿using System;
+﻿using DevExpress.XtraEditors;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
 namespace XtraPivotGrid_UserFolders {
-    public partial class Form1 : Form {
+    public partial class Form1 : XtraForm {
         public Form1() {
             InitializeComponent();
         }
 
         private void Form1_Load(object sender, EventArgs e) {
-
-            // Binds the pivot grid to data.
             this.salesPersonTableAdapter.Fill(this.nwindDataSet.SalesPerson);
 
-            // Enables displaying user folders.
+            // Enable group folders in a customization window.
             pivotGridControl1.OptionsView.GroupFieldsInCustomizationWindow = true;
 
-            // Specifies the name of the folder in which the Employees field is located.
+            // Specify the name of the folder that contains the Employees field.
             fieldSalesPerson.DisplayFolder = "Employees";
+            fieldSalesPerson.Visible = false;
 
-            // Specifies names of the main folder and nested folders in which 
-            // the Product Name and Category Name fields are located.
-            // Uses the "\" symbol as a delimiter when specifying folder names.
+            // Specify the root and the nested folder names.
             fieldProductName.DisplayFolder = "Products\\Name";
             fieldCategoryName.DisplayFolder = "Products\\Category";
+            fieldProductName.Visible = false;
+            fieldCategoryName.Visible = false;
 
-            // Invokes the Customization Form at the lower right corner of the main window.
+            // Invoke the Customization Form at the default location - the main window's bottom right corner.
             pivotGridControl1.FieldsCustomization();
+            
         }
     }
 }

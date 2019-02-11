@@ -1,6 +1,4 @@
-﻿Imports Microsoft.VisualBasic
-Imports System
-Namespace XtraPivotGrid_UserFolders
+﻿Namespace XtraPivotGrid_UserFolders
 	Partial Public Class Form1
 		''' <summary>
 		''' Required designer variable.
@@ -27,6 +25,8 @@ Namespace XtraPivotGrid_UserFolders
 		Private Sub InitializeComponent()
 			Me.components = New System.ComponentModel.Container()
 			Me.pivotGridControl1 = New DevExpress.XtraPivotGrid.PivotGridControl()
+			Me.salesPersonBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+			Me.nwindDataSet = New XtraPivotGrid_UserFolders.nwindDataSet()
 			Me.fieldCountry = New DevExpress.XtraPivotGrid.PivotGridField()
 			Me.fieldProductName = New DevExpress.XtraPivotGrid.PivotGridField()
 			Me.fieldCategoryName = New DevExpress.XtraPivotGrid.PivotGridField()
@@ -34,12 +34,10 @@ Namespace XtraPivotGrid_UserFolders
 			Me.fieldQuantity = New DevExpress.XtraPivotGrid.PivotGridField()
 			Me.fieldExtendedPrice = New DevExpress.XtraPivotGrid.PivotGridField()
 			Me.fieldSalesPerson = New DevExpress.XtraPivotGrid.PivotGridField()
-			Me.salesPersonBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-			Me.nwindDataSet = New XtraPivotGrid_UserFolders.nwindDataSet()
 			Me.salesPersonTableAdapter = New XtraPivotGrid_UserFolders.nwindDataSetTableAdapters.SalesPersonTableAdapter()
-			CType(Me.pivotGridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
-			CType(Me.salesPersonBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-			CType(Me.nwindDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+			DirectCast(Me.pivotGridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+			DirectCast(Me.salesPersonBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+			DirectCast(Me.nwindDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
 			Me.SuspendLayout()
 			' 
 			' pivotGridControl1
@@ -49,8 +47,18 @@ Namespace XtraPivotGrid_UserFolders
 			Me.pivotGridControl1.Fields.AddRange(New DevExpress.XtraPivotGrid.PivotGridField() { Me.fieldCountry, Me.fieldProductName, Me.fieldCategoryName, Me.fieldOrderDate, Me.fieldQuantity, Me.fieldExtendedPrice, Me.fieldSalesPerson})
 			Me.pivotGridControl1.Location = New System.Drawing.Point(0, 0)
 			Me.pivotGridControl1.Name = "pivotGridControl1"
-			Me.pivotGridControl1.Size = New System.Drawing.Size(845, 469)
+			Me.pivotGridControl1.Size = New System.Drawing.Size(694, 373)
 			Me.pivotGridControl1.TabIndex = 0
+			' 
+			' salesPersonBindingSource
+			' 
+			Me.salesPersonBindingSource.DataMember = "SalesPerson"
+			Me.salesPersonBindingSource.DataSource = Me.nwindDataSet
+			' 
+			' nwindDataSet
+			' 
+			Me.nwindDataSet.DataSetName = "nwindDataSet"
+			Me.nwindDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
 			' 
 			' fieldCountry
 			' 
@@ -96,7 +104,9 @@ Namespace XtraPivotGrid_UserFolders
 			Me.fieldExtendedPrice.AreaIndex = 0
 			Me.fieldExtendedPrice.Caption = "Extended Price"
 			Me.fieldExtendedPrice.FieldName = "Extended Price"
+			Me.fieldExtendedPrice.MinWidth = 100
 			Me.fieldExtendedPrice.Name = "fieldExtendedPrice"
+			Me.fieldExtendedPrice.Width = 200
 			' 
 			' fieldSalesPerson
 			' 
@@ -106,16 +116,6 @@ Namespace XtraPivotGrid_UserFolders
 			Me.fieldSalesPerson.FieldName = "Sales Person"
 			Me.fieldSalesPerson.Name = "fieldSalesPerson"
 			' 
-			' salesPersonBindingSource
-			' 
-			Me.salesPersonBindingSource.DataMember = "SalesPerson"
-			Me.salesPersonBindingSource.DataSource = Me.nwindDataSet
-			' 
-			' nwindDataSet
-			' 
-			Me.nwindDataSet.DataSetName = "nwindDataSet"
-			Me.nwindDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-			' 
 			' salesPersonTableAdapter
 			' 
 			Me.salesPersonTableAdapter.ClearBeforeFill = True
@@ -124,14 +124,15 @@ Namespace XtraPivotGrid_UserFolders
 			' 
 			Me.AutoScaleDimensions = New System.Drawing.SizeF(6F, 13F)
 			Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-			Me.ClientSize = New System.Drawing.Size(845, 469)
+			Me.ClientSize = New System.Drawing.Size(694, 373)
 			Me.Controls.Add(Me.pivotGridControl1)
 			Me.Name = "Form1"
-			Me.Text = "Form1"
-'			Me.Load += New System.EventHandler(Me.Form1_Load);
-			CType(Me.pivotGridControl1, System.ComponentModel.ISupportInitialize).EndInit()
-			CType(Me.salesPersonBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-			CType(Me.nwindDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+			Me.Text = "Customization Window Folders Example"
+'INSTANT VB NOTE: The following InitializeComponent event wireup was converted to a 'Handles' clause:
+'ORIGINAL LINE: this.Load += new System.EventHandler(this.Form1_Load);
+			DirectCast(Me.pivotGridControl1, System.ComponentModel.ISupportInitialize).EndInit()
+			DirectCast(Me.salesPersonBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+			DirectCast(Me.nwindDataSet, System.ComponentModel.ISupportInitialize).EndInit()
 			Me.ResumeLayout(False)
 
 		End Sub
