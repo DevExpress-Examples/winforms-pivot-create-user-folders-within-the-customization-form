@@ -24,6 +24,21 @@
 		''' </summary>
 		Private Sub InitializeComponent()
 			Me.components = New System.ComponentModel.Container()
+			Dim resources As New System.ComponentModel.ComponentResourceManager(GetType(Form1))
+			Dim fieldInfo1 As New DevExpress.DataAccess.Excel.FieldInfo()
+			Dim fieldInfo2 As New DevExpress.DataAccess.Excel.FieldInfo()
+			Dim fieldInfo3 As New DevExpress.DataAccess.Excel.FieldInfo()
+			Dim fieldInfo4 As New DevExpress.DataAccess.Excel.FieldInfo()
+			Dim fieldInfo5 As New DevExpress.DataAccess.Excel.FieldInfo()
+			Dim fieldInfo6 As New DevExpress.DataAccess.Excel.FieldInfo()
+			Dim fieldInfo7 As New DevExpress.DataAccess.Excel.FieldInfo()
+			Dim fieldInfo8 As New DevExpress.DataAccess.Excel.FieldInfo()
+			Dim fieldInfo9 As New DevExpress.DataAccess.Excel.FieldInfo()
+			Dim fieldInfo10 As New DevExpress.DataAccess.Excel.FieldInfo()
+			Dim fieldInfo11 As New DevExpress.DataAccess.Excel.FieldInfo()
+			Dim fieldInfo12 As New DevExpress.DataAccess.Excel.FieldInfo()
+			Dim excelWorksheetSettings1 As New DevExpress.DataAccess.Excel.ExcelWorksheetSettings()
+			Dim excelSourceOptions1 As New DevExpress.DataAccess.Excel.ExcelSourceOptions(excelWorksheetSettings1)
 			Me.pivotGridControl1 = New DevExpress.XtraPivotGrid.PivotGridControl()
 			Me.salesPersonBindingSource = New System.Windows.Forms.BindingSource(Me.components)
 			Me.nwindDataSet = New XtraPivotGrid_UserFolders.nwindDataSet()
@@ -35,6 +50,7 @@
 			Me.fieldExtendedPrice = New DevExpress.XtraPivotGrid.PivotGridField()
 			Me.fieldSalesPerson = New DevExpress.XtraPivotGrid.PivotGridField()
 			Me.salesPersonTableAdapter = New XtraPivotGrid_UserFolders.nwindDataSetTableAdapters.SalesPersonTableAdapter()
+			Me.excelDataSource1 = New DevExpress.DataAccess.Excel.ExcelDataSource()
 			DirectCast(Me.pivotGridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
 			DirectCast(Me.salesPersonBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
 			DirectCast(Me.nwindDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -42,12 +58,12 @@
 			' 
 			' pivotGridControl1
 			' 
-			Me.pivotGridControl1.DataSource = Me.salesPersonBindingSource
+			Me.pivotGridControl1.DataSource = Me.excelDataSource1
 			Me.pivotGridControl1.Dock = System.Windows.Forms.DockStyle.Fill
 			Me.pivotGridControl1.Fields.AddRange(New DevExpress.XtraPivotGrid.PivotGridField() { Me.fieldCountry, Me.fieldProductName, Me.fieldCategoryName, Me.fieldOrderDate, Me.fieldQuantity, Me.fieldExtendedPrice, Me.fieldSalesPerson})
 			Me.pivotGridControl1.Location = New System.Drawing.Point(0, 0)
 			Me.pivotGridControl1.Name = "pivotGridControl1"
-			Me.pivotGridControl1.Size = New System.Drawing.Size(694, 373)
+			Me.pivotGridControl1.Size = New System.Drawing.Size(702, 373)
 			Me.pivotGridControl1.TabIndex = 0
 			' 
 			' salesPersonBindingSource
@@ -120,11 +136,46 @@
 			' 
 			Me.salesPersonTableAdapter.ClearBeforeFill = True
 			' 
+			' excelDataSource1
+			' 
+			Me.excelDataSource1.FileName = "C:\Data\SalesPerson.xlsx"
+			Me.excelDataSource1.Name = "excelDataSource1"
+			Me.excelDataSource1.ResultSchemaSerializable = resources.GetString("excelDataSource1.ResultSchemaSerializable")
+			fieldInfo1.Name = "CategoryName"
+			fieldInfo1.Type = GetType(String)
+			fieldInfo2.Name = "Country"
+			fieldInfo2.Type = GetType(String)
+			fieldInfo3.Name = "FirstName"
+			fieldInfo3.Type = GetType(String)
+			fieldInfo4.Name = "LastName"
+			fieldInfo4.Type = GetType(String)
+			fieldInfo5.Name = "ProductName"
+			fieldInfo5.Type = GetType(String)
+			fieldInfo6.Name = "Sales Person"
+			fieldInfo6.Type = GetType(String)
+			fieldInfo7.Name = "OrderDate"
+			fieldInfo7.Type = GetType(Date)
+			fieldInfo8.Name = "OrderID"
+			fieldInfo8.Type = GetType(Double)
+			fieldInfo9.Name = "Quantity"
+			fieldInfo9.Type = GetType(Double)
+			fieldInfo10.Name = "Discount"
+			fieldInfo10.Type = GetType(Double)
+			fieldInfo11.Name = "Extended Price"
+			fieldInfo11.Type = GetType(Double)
+			fieldInfo12.Name = "UnitPrice"
+			fieldInfo12.Type = GetType(Double)
+			Me.excelDataSource1.Schema.AddRange(New DevExpress.DataAccess.Excel.FieldInfo() { fieldInfo1, fieldInfo2, fieldInfo3, fieldInfo4, fieldInfo5, fieldInfo6, fieldInfo7, fieldInfo8, fieldInfo9, fieldInfo10, fieldInfo11, fieldInfo12})
+			excelWorksheetSettings1.CellRange = Nothing
+			excelWorksheetSettings1.WorksheetName = "Data"
+			excelSourceOptions1.ImportSettings = excelWorksheetSettings1
+			Me.excelDataSource1.SourceOptions = excelSourceOptions1
+			' 
 			' Form1
 			' 
 			Me.AutoScaleDimensions = New System.Drawing.SizeF(6F, 13F)
 			Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-			Me.ClientSize = New System.Drawing.Size(694, 373)
+			Me.ClientSize = New System.Drawing.Size(702, 373)
 			Me.Controls.Add(Me.pivotGridControl1)
 			Me.Name = "Form1"
 			Me.Text = "Customization Window Folders Example"
@@ -150,6 +201,7 @@
 		Private fieldQuantity As DevExpress.XtraPivotGrid.PivotGridField
 		Private fieldExtendedPrice As DevExpress.XtraPivotGrid.PivotGridField
 		Private fieldSalesPerson As DevExpress.XtraPivotGrid.PivotGridField
+		Private excelDataSource1 As DevExpress.DataAccess.Excel.ExcelDataSource
 	End Class
 End Namespace
 

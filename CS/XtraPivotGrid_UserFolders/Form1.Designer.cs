@@ -24,6 +24,21 @@
         /// </summary>
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo1 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo2 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo3 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo4 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo5 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo6 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo7 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo8 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo9 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo10 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo11 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.FieldInfo fieldInfo12 = new DevExpress.DataAccess.Excel.FieldInfo();
+            DevExpress.DataAccess.Excel.ExcelWorksheetSettings excelWorksheetSettings1 = new DevExpress.DataAccess.Excel.ExcelWorksheetSettings();
+            DevExpress.DataAccess.Excel.ExcelSourceOptions excelSourceOptions1 = new DevExpress.DataAccess.Excel.ExcelSourceOptions(excelWorksheetSettings1);
             this.pivotGridControl1 = new DevExpress.XtraPivotGrid.PivotGridControl();
             this.salesPersonBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nwindDataSet = new XtraPivotGrid_UserFolders.nwindDataSet();
@@ -35,6 +50,7 @@
             this.fieldExtendedPrice = new DevExpress.XtraPivotGrid.PivotGridField();
             this.fieldSalesPerson = new DevExpress.XtraPivotGrid.PivotGridField();
             this.salesPersonTableAdapter = new XtraPivotGrid_UserFolders.nwindDataSetTableAdapters.SalesPersonTableAdapter();
+            this.excelDataSource1 = new DevExpress.DataAccess.Excel.ExcelDataSource();
             ((System.ComponentModel.ISupportInitialize)(this.pivotGridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesPersonBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nwindDataSet)).BeginInit();
@@ -42,7 +58,7 @@
             // 
             // pivotGridControl1
             // 
-            this.pivotGridControl1.DataSource = this.salesPersonBindingSource;
+            this.pivotGridControl1.DataSource = this.excelDataSource1;
             this.pivotGridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pivotGridControl1.Fields.AddRange(new DevExpress.XtraPivotGrid.PivotGridField[] {
             this.fieldCountry,
@@ -54,7 +70,7 @@
             this.fieldSalesPerson});
             this.pivotGridControl1.Location = new System.Drawing.Point(0, 0);
             this.pivotGridControl1.Name = "pivotGridControl1";
-            this.pivotGridControl1.Size = new System.Drawing.Size(694, 373);
+            this.pivotGridControl1.Size = new System.Drawing.Size(702, 373);
             this.pivotGridControl1.TabIndex = 0;
             // 
             // salesPersonBindingSource
@@ -127,11 +143,58 @@
             // 
             this.salesPersonTableAdapter.ClearBeforeFill = true;
             // 
+            // excelDataSource1
+            // 
+            this.excelDataSource1.FileName = "C:\\Data\\SalesPerson.xlsx";
+            this.excelDataSource1.Name = "excelDataSource1";
+            this.excelDataSource1.ResultSchemaSerializable = resources.GetString("excelDataSource1.ResultSchemaSerializable");
+            fieldInfo1.Name = "CategoryName";
+            fieldInfo1.Type = typeof(string);
+            fieldInfo2.Name = "Country";
+            fieldInfo2.Type = typeof(string);
+            fieldInfo3.Name = "FirstName";
+            fieldInfo3.Type = typeof(string);
+            fieldInfo4.Name = "LastName";
+            fieldInfo4.Type = typeof(string);
+            fieldInfo5.Name = "ProductName";
+            fieldInfo5.Type = typeof(string);
+            fieldInfo6.Name = "Sales Person";
+            fieldInfo6.Type = typeof(string);
+            fieldInfo7.Name = "OrderDate";
+            fieldInfo7.Type = typeof(System.DateTime);
+            fieldInfo8.Name = "OrderID";
+            fieldInfo8.Type = typeof(double);
+            fieldInfo9.Name = "Quantity";
+            fieldInfo9.Type = typeof(double);
+            fieldInfo10.Name = "Discount";
+            fieldInfo10.Type = typeof(double);
+            fieldInfo11.Name = "Extended Price";
+            fieldInfo11.Type = typeof(double);
+            fieldInfo12.Name = "UnitPrice";
+            fieldInfo12.Type = typeof(double);
+            this.excelDataSource1.Schema.AddRange(new DevExpress.DataAccess.Excel.FieldInfo[] {
+            fieldInfo1,
+            fieldInfo2,
+            fieldInfo3,
+            fieldInfo4,
+            fieldInfo5,
+            fieldInfo6,
+            fieldInfo7,
+            fieldInfo8,
+            fieldInfo9,
+            fieldInfo10,
+            fieldInfo11,
+            fieldInfo12});
+            excelWorksheetSettings1.CellRange = null;
+            excelWorksheetSettings1.WorksheetName = "Data";
+            excelSourceOptions1.ImportSettings = excelWorksheetSettings1;
+            this.excelDataSource1.SourceOptions = excelSourceOptions1;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(694, 373);
+            this.ClientSize = new System.Drawing.Size(702, 373);
             this.Controls.Add(this.pivotGridControl1);
             this.Name = "Form1";
             this.Text = "Customization Window Folders Example";
@@ -156,6 +219,7 @@
         private DevExpress.XtraPivotGrid.PivotGridField fieldQuantity;
         private DevExpress.XtraPivotGrid.PivotGridField fieldExtendedPrice;
         private DevExpress.XtraPivotGrid.PivotGridField fieldSalesPerson;
+        private DevExpress.DataAccess.Excel.ExcelDataSource excelDataSource1;
     }
 }
 

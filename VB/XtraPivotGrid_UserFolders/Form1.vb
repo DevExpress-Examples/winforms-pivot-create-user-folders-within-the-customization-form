@@ -13,6 +13,8 @@ Namespace XtraPivotGrid_UserFolders
 
 		Private Sub Form1_Load(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Load
 			Me.salesPersonTableAdapter.Fill(Me.nwindDataSet.SalesPerson)
+			excelDataSource1.FileName = "SalesPerson.xlsx"
+			excelDataSource1.Fill()
 
 			' Enable group folders in a customization window.
 			pivotGridControl1.OptionsView.GroupFieldsInCustomizationWindow = True

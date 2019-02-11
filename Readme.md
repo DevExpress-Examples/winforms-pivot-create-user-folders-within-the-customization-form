@@ -8,7 +8,7 @@
 
 This example demonstrates how to organize the Customization Form fields in folders.
 
-![screenshot](https://github.com/DevExpress-Examples/how-to-create-user-folders-within-the-customization-form-e4391/blob/13.1.4%2B/images/screenshot.png)
+![](~/images/screenshot.png)
 
 API in this example:
 
