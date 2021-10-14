@@ -20,7 +20,7 @@ API in this example:
 * [PivotGridOptionsViewBase.GroupFieldsInCustomizationWindow](https://docs.devexpress.com/CoreLibraries/DevExpress.XtraPivotGrid.PivotGridOptionsViewBase.GroupFieldsInCustomizationWindow) property
 * [PivotGridFieldBase.DisplayFolder](https://docs.devexpress.com/CoreLibraries/DevExpress.XtraPivotGrid.PivotGridFieldBase.DisplayFolder) property
 * [PivotGridFieldBase.Visible](https://docs.devexpress.com/CoreLibraries/DevExpress.XtraPivotGrid.PivotGridFieldBase.Visible) property
-* [PivotGridControl.FieldsCustomization](https://docs.devexpress.com/WindowsForms/DevExpress.XtraPivotGrid.PivotGridControl.FieldsCustomization) method
+* [PivotGridControl.ShowCustomization](https://docs.devexpress.com/WindowsForms/DevExpress.XtraPivotGrid.PivotGridControl.ShowCustomization) method
 
 See also:
 
