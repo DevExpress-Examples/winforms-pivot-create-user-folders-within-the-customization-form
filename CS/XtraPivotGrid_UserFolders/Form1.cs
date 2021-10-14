@@ -28,7 +28,7 @@ namespace XtraPivotGrid_UserFolders {
             fieldCategoryName.Visible = false;
 
             // Invoke the Customization Form at the default location - the main window's bottom right corner.
-            pivotGridControl1.FieldsCustomization();
+            pivotGridControl1.ShowCustomization();
             
         }
     }
