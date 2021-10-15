@@ -4,7 +4,7 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
 
-# How to Group Fields into Folders in the Customization Form
+# Pivot Grid for WinForms - How to Group Fields into Folders in the Customization Form
 
 This example demonstrates how to organize the Customization Form fields in folders.
 
