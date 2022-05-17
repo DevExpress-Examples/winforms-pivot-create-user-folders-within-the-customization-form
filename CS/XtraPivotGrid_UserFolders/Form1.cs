@@ -18,14 +18,14 @@ namespace XtraPivotGrid_UserFolders {
             pivotGridControl1.OptionsView.GroupFieldsInCustomizationWindow = true;
 
             // Specify the name of the folder that contains the Employees field.
-            fieldSalesPerson.DisplayFolder = "Employees";
-            fieldSalesPerson.Visible = false;
+            fieldSalesPerson1.DisplayFolder = "Employees";
+            fieldSalesPerson1.Visible = false;
 
             // Specify the root and the nested folder names.
-            fieldProductName.DisplayFolder = "Products\\Name";
-            fieldCategoryName.DisplayFolder = "Products\\Category";
-            fieldProductName.Visible = false;
-            fieldCategoryName.Visible = false;
+            fieldProductName1.DisplayFolder = "Products\\Name";
+            fieldCategoryName1.DisplayFolder = "Products\\Category";
+            fieldProductName1.Visible = false;
+            fieldCategoryName1.Visible = false;
 
             // Invoke the Customization Form at the default location - the main window's bottom right corner.
             pivotGridControl1.ShowCustomization();
