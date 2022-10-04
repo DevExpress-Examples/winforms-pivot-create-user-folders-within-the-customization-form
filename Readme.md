@@ -11,7 +11,7 @@ This example demonstrates how to organize the Customization Form fields in folde
 ![screenshot](./images/screenshot.png)
 
 <!-- default file list -->
-## Files to Look At
+## Files to Review
 
 * [Form1.cs](./CS/XtraPivotGrid_UserFolders/Form1.cs) (VB: [Form1.vb](./VB/XtraPivotGrid_UserFolders/Form1.vb))
 <!-- default file list end -->
