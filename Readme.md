@@ -25,4 +25,9 @@ This example demonstrates how to organize the Customization Form fields in folde
 
 ## Documentation
 
-* [User Folders](https://docs.devexpress.com/WindowsForms/11788)
+- [User Folders](https://docs.devexpress.com/WindowsForms/11788)
+- [Customization Form](https://docs.devexpress.com/WindowsForms/11785/controls-and-libraries/pivot-grid/layout/customization-form/customization-form-overview)
+
+## More Examples 
+
+[WinForms Pivot Grid - Display the Customization Form near the Pivot Grid](https://github.com/DevExpress-Examples/winforms-pivot-display-the-customization-form-near-the-pivotgrid)
